@@ -1,0 +1,46 @@
+/**
+ * Projects page styles for mobile
+ */
+@media screen and (max-width: 749px) {
+  /* Hide desktop elements */
+  #desktop-projects {
+    display: none;
+  }
+
+  body {
+    overflow-y: scroll;
+  }
+
+  #projects {
+    background-color: #e8e8e8;
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+    height: auto;
+  }
+
+  #projects .page-title {
+    margin-bottom: 2rem;
+  }
+
+  .project-image {
+    display: block;
+    background-color: white;
+    width: 75vw;
+    height: 55vh;
+    border-radius: 40px;
+    margin-bottom: 2rem;
+    border: 1px solid #707070;
+  }
+
+  .project-title {
+    margin-bottom: 2rem;
+    font-weight: 400;
+  }
+}

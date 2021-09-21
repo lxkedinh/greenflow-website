@@ -1,0 +1,74 @@
+/**
+ * Projects page styles for desktop
+ */
+@media screen and (min-width: 750px) {
+  #projects,
+  #navigation {
+    display: none;
+  }
+
+  #desktop-projects {
+    height: 100vh;
+    width: 100vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  #card-container {
+    flex-grow: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: #fff;
+    justify-content: center;
+    padding: 3rem 0;
+  }
+
+  .card-column {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin: 0 3rem;
+    margin-top: 3rem;
+  }
+
+  .alt-card-column {
+    margin-top: 0rem;
+  }
+
+  .card {
+    background-color: #fff;
+    padding: 15px;
+    margin-bottom: 2rem;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    box-shadow: 0 0 40px 5px #ddd;
+  }
+
+  .card img {
+    height: 400px;
+    width: 300px;
+  }
+
+  .card-desc {
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  .copyright {
+    text-align: center;
+  }
+}

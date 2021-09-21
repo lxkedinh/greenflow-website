@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= title %></title>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/stylesheets/main.css" />
+    <link rel="stylesheet" href="/stylesheets/mobile/formresponse.css" />
+    <link rel="stylesheet" href="/stylesheets/desktop/formresponse.css" />
+  </head>
+  <body>
+    <!-- Mobile form response section -->
+    <section id="form-response">
+      <div class="menu">
+        <img
+          class="logo"
+          src="images/greenflow logo.svg"
+          alt="Greenflow HVAC Logo"
+        />
+
+        <!-- Hamburger menu button -->
+        <div id="nav-button-wrapper">
+          <div class="nav-button"></div>
+          <div class="nav-button"></div>
+          <div class="nav-button"></div>
+        </div>
+      </div>
+      <p id="response"><%= response %></p>
+      <a href="/" id="home-button">Home</a>
+      <p class="copyright">
+        Copyright 2021 Greenflow HVAC. All rights reserved.
+      </p>
+    </section>
+    <!-- Mobile navigation menu -->
+    <section id="navigation" class="hidden-navigation">
+      <div class="menu">
+        <img
+          class="logo"
+          src="images/greenflow logo.svg"
+          alt="Greenflow HVAC Logo"
+        />
+
+        <div id="nav-exit-button-wrapper">
+          <div class="exit-button"></div>
+          <div class="exit-button"></div>
+        </div>
+      </div>
+
+      <nav class="menu-items">
+        <li class="menu-item">
+          <div class="list-marker"></div>
+          <a class="nav-link" href="/history">Our History</a>
+        </li>
+        <li class="menu-item">
+          <div class="list-marker"></div>
+          <a class="nav-link" href="/projects">Our Projects/Portfolio</a>
+        </li>
+        <li class="menu-item">
+          <div class="list-marker"></div>
+          <a class="nav-link" href="/resources">Resources</a>
+        </li>
+        <li class="menu-item">
+          <div class="list-marker"></div>
+          <a class="nav-link" href="/contact-us">Contact Us</a>
+        </li>
+      </nav>
+
+      <p class="copyright">
+        Copyright 2021 Greenflow HVAC. All rights reserved.
+      </p>
+    </section>
+    <!-- Desktop form response section -->
+    <section id="desktop-form-response">
+      <nav id="navbar">
+        <ul id="nav-menu">
+          <img
+            class="logo"
+            src="images/desktop logo.png"
+            alt="Greenflow Logo"
+          />
+          <li class="nav-item" id="nav-title">
+            <a href="/"
+              ><span id="greenflow">Greenflow</span><br />
+              Heating, Ventilation,<br />
+              Air Conditioning Services</a
+            >
+          </li>
+          <li class="nav-item"><a href="/history">Our History</a></li>
+          <li class="nav-item"><a href="/resources">Resources</a></li>
+          <li class="nav-item">
+            <a href="/projects">Our Projects/Portfolio</a>
+          </li>
+          <li class="nav-item button">
+            <a href="/contact-us">Contact Our Consultant For Free</a>
+          </li>
+        </ul>
+      </nav>
+      <p id="response"><%= response %></p>
+      <a href="/" id="home-button" class="button">Home</a>
+      <p class="copyright">
+        Copyright 2021 Greenflow HVAC. All rights reserved.
+      </p>
+    </section>
+    <!-- JQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Javascripts -->
+    <script src="javascripts/mobile/main.js"></script>
+  </body>
+</html>

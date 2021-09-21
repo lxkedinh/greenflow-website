@@ -1,0 +1,139 @@
+/**
+ * Home page styles for desktop
+ */
+@media screen and (min-width: 750px) {
+  /* Hide all mobile elements */
+  #landing-page,
+  #navigation {
+    display: none;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  #desktop-landing-page {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    height: 100vh;
+  }
+
+  #landing-section-1 {
+    width: 85vw;
+    height: 55vh;
+    margin-top: 3rem;
+
+    position: relative;
+  }
+
+  #desktop-intro,
+  #desktop-overview {
+    font-size: 1.5rem;
+  }
+
+  #desktop-intro {
+    position: absolute;
+    left: 0;
+    width: 20vw;
+    z-index: 2;
+  }
+
+  #plant-image {
+    transform-origin: top right;
+    transform: scale(0.65);
+    position: absolute;
+    top: -10%;
+    right: 0%;
+  }
+
+  .green-text {
+    color: #80b949;
+  }
+
+  #continue-button {
+    position: absolute;
+    bottom: 14%;
+    right: 8%;
+    padding-left: 2rem;
+    padding-right: 1rem;
+  }
+
+  #continue-button::before {
+    content: "";
+    position: absolute;
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-top: 20px solid black;
+    border-left: 11px solid transparent;
+    border-right: 11px solid transparent;
+  }
+
+  #landing-section-2 {
+    width: 85vw;
+    z-index: 10;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    flex-grow: 1;
+  }
+
+  .landing-contact-button {
+    align-self: flex-end;
+    position: relative;
+    padding-left: 2rem;
+  }
+
+  .landing-contact-button::before {
+    background-color: black;
+    left: 10%;
+  }
+
+  .landing-contact-button::after {
+    background-color: black;
+    left: 10%;
+  }
+
+  .copyright {
+    align-self: center;
+  }
+}
+
+/* Adjusted rules for smaller desktop resolutions */
+@media screen and (min-width: 1366px) {
+  #desktop-intro,
+  #desktop-overview {
+    font-size: 2rem;
+  }
+
+  #plant-image {
+    transform: scale(0.7);
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  #plant-image {
+    transform: scale(0.8);
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  #plant-image {
+    transform: scale(0.9);
+  }
+
+  #desktop-intro,
+  #desktop-overview {
+    font-size: 1.5rem;
+  }
+}

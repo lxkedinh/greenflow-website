@@ -1,0 +1,316 @@
+/* General styles for both desktop and mobile */
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400&family=Roboto:wght@300;400;500&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+/* General styles for mobile */
+@media screen and (max-width: 749px) {
+  html {
+    font-size: 16px;
+    overflow: hidden;
+  }
+
+  body {
+    background-color: #e8e8e8;
+    position: relative;
+    overflow: hidden;
+  }
+
+  html,
+  body {
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .menu {
+    width: 100vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    max-width: 40vw;
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+  }
+
+  #nav-button-wrapper {
+    margin-right: 1.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  .nav-button {
+    width: 20px;
+    height: 2px;
+    background-color: black;
+    margin-bottom: 3px;
+  }
+
+  .copyright {
+    font-size: 0.7rem;
+    font-family: "Roboto Mono", sans-serif;
+    text-align: center;
+  }
+
+  .button {
+    padding: 7px 15px;
+    padding-left: 30px;
+    text-decoration: none;
+    letter-spacing: 1.3px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    color: black;
+  }
+
+  .button::before {
+    content: "";
+    position: absolute;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    top: 50%;
+    left: 11%;
+    width: 2px;
+    height: 15px;
+  }
+
+  .button::after {
+    content: "";
+    position: absolute;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    top: 50%;
+    left: 11%;
+    width: 15px;
+    height: 2px;
+  }
+
+  /* shared mobile page structure styles */
+  #navigation,
+  #history,
+  #contact-us {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    background-color: #e8e8e8;
+    overflow: hidden;
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  #history *,
+  #projects *,
+  #contact-us * {
+    font-family: "Roboto Mono", sans-serif;
+  }
+
+  /* Mobile navigation menu */
+  #navigation {
+    transition: left 1.5s ease-in-out;
+    z-index: 10;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .hidden-navigation {
+    left: 150vw;
+  }
+
+  .visible-navigation {
+    left: 0;
+  }
+
+  .exit-button {
+    background-color: black;
+    width: 20px;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  .exit-button:last-of-type {
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+
+  #nav-exit-button-wrapper {
+    position: relative;
+    margin-right: 1.5rem;
+    height: 20px;
+    width: 20px;
+  }
+
+  .menu-items {
+    margin-top: 2rem;
+    margin-left: 3rem;
+    font-size: 1.3rem;
+    list-style-type: none;
+    flex-grow: 1;
+  }
+
+  .menu-item {
+    margin-bottom: 2.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .list-marker {
+    width: 10px;
+    height: 10px;
+    border: 2px solid black;
+    border-left: none;
+    border-top: none;
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    margin-right: 0.75rem;
+  }
+
+  .nav-link {
+    text-decoration: none;
+    color: black;
+  }
+
+  .page-title {
+    margin: 1rem auto 3rem auto;
+  }
+}
+
+/* General styles for desktop */
+@media screen and (min-width: 750px) {
+  html {
+    font-size: 14px;
+  }
+
+  body {
+    background-color: #e8e8e8;
+  }
+
+  /* Desktop navigation bar */
+  #nav-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  #nav-menu {
+    width: 100vw;
+    height: 10vh;
+
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5rem;
+    list-style-type: none;
+    font-size: 1.1rem;
+  }
+
+  .nav-item a,
+  .nav-item a:visited {
+    text-decoration: none;
+    color: black;
+  }
+
+  .logo {
+    max-width: 5rem;
+  }
+
+  #nav-title {
+    font-family: "Roboto Mono", monospace;
+    text-align: center;
+  }
+
+  #greenflow {
+    color: #008037;
+    border: #262626;
+  }
+
+  .button {
+    color: black;
+    background-color: rgba(127, 255, 0, 0.77);
+    padding: 7px;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+
+  .button:visited {
+    color: black;
+  }
+
+  .icon-button {
+    position: relative;
+  }
+
+  .icon-button::before {
+    content: "";
+    position: absolute;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    top: 50%;
+    left: 11%;
+    width: 2px;
+    height: 15px;
+  }
+
+  .icon-button::after {
+    content: "";
+    position: absolute;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    top: 50%;
+    left: 11%;
+    width: 15px;
+    height: 2px;
+  }
+
+  .page-title {
+    font-family: "Roboto Mono", monospace;
+    margin: 2rem;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 2100px) {
+  html {
+    font-size: 20px;
+  }
+}

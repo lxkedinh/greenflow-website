@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Greenflow HVAC - Contact Us</title>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/stylesheets/main.css" />
+    <link rel="stylesheet" href="/stylesheets/mobile/contactform.css" />
+    <link rel="stylesheet" href="/stylesheets/desktop/contactform.css" />
+  </head>
+
+  <body>
+    <!-- Contact Us page -->
+    <section id="contact-us" class="hidden-page">
+      <div class="menu">
+        <img
+          class="logo"
+          src="images/greenflow logo.svg"
+          alt="Greenflow HVAC Logo"
+        />
+
+        <div id="nav-button-wrapper">
+          <div class="nav-button"></div>
+          <div class="nav-button"></div>
+          <div class="nav-button"></div>
+        </div>
+      </div>
+      <form action="/form-submission" id="contact-form" method="POST">
+        <div id="contact-name">
+          <div id="first-name-container">
+            <label for="first-name"
+              >First Name <span class="required">*</span></label
+            >
+            <input
+              type="text"
+              id="first-name"
+              name="firstName"
+              placeholder="John"
+              required
+            />
+          </div>
+          <div id="last-name-container">
+            <label for="last-name"
+              >Last Name <span class="required">*</span></label
+            >
+            <input type='text id=' last-name' name='lastName'
+            placeholder='Smith' required>
+          </div>
+        </div>
+
+        <label for="phone">Phone Number</label>
+        <input type="text" id="phone" name="phone" placeholder="800-888-8888" />
+
+        <label for="email">Email <span class="required">*</span></label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="JohnSmith@gmail.com"
+          required
+        />
+
+        <label for="message">Message <span class="required">*</span></label>
+        <input type="text" id="message" name="message" required />
+
+        <div id="contact-submit-button-wrapper">
+          <input
+            id="contact-submit"
+            type="submit"
+            value="SUBMIT"
+            class="button contact-submit-button"
+          />
+        </div>
+      </form>
+      <p class="copyright">
+        Copyright 2021 Greenflow HVAC. All rights reserved.
+      </p>
+    </section>
+    <!-- Navigation menu -->
+    <section id="navigation" class="hidden-navigation">
+      <div class="menu">
+        <img
+          class="logo"
+          src="images/greenflow logo.svg"
+          alt="Greenflow HVAC Logo"
+        />
+
+        <div id="nav-exit-button-wrapper">
+          <div class="exit-button"></div>
+          <div class="exit-button"></div>
+        </div>
+      </div>
+
+      <ul class="menu-items">
+        <li class="menu-item">
+          <div class="list-marker"></div>
+          <a class="nav-link" href="/">Home</a>
+        </li>
+        <li class="menu-item">
+          <div class="list-marker"></div>
+          <a class="nav-link" href="/history">Our History</a>
+        </li>
+        <li class="menu-item">
+          <div class="list-marker"></div>
+          <a class="nav-link" href="/projects">Our Projects/Portfolio</a>
+        </li>
+        <li class="menu-item">
+          <div class="list-marker"></div>
+          <a class="nav-link" href="/resources">Resources</a>
+        </li>
+      </ul>
+
+      <p class="copyright">
+        Copyright 2021 Greenflow HVAC. All rights reserved.
+      </p>
+    </section>
+    <!-- Desktop contact us page -->
+    <section id="desktop-contact-us">
+      <nav id="navbar">
+        <ul id="nav-menu">
+          <img
+            class="logo"
+            src="images/desktop logo.png"
+            alt="Greenflow Logo"
+          />
+          <li class="nav-item" id="nav-title">
+            <a href="/"
+              ><span id="greenflow">Greenflow</span><br />
+              Heating, Ventilation,<br />
+              Air Conditioning Services</a
+            >
+          </li>
+          <li class="nav-item"><a href="/history">Our History</a></li>
+          <li class="nav-item"><a href="/resources">Resources</a></li>
+          <li class="nav-item">
+            <a href="/projects">Our Projects/Portfolio</a>
+          </li>
+          <li class="nav-item button">
+            <a href="/contact-us">Contact Our Consultant For Free</a>
+          </li>
+        </ul>
+      </nav>
+      <h1 class="page-title">Contact Our Consultant</h1>
+      <form action="/form-submission" id="contact-form" method="POST">
+        <div id="name-container">
+          <div id="first-name-container">
+            <label for="first-name"
+              >First Name <span class="required">*</span></label
+            >
+            <input
+              name="firstName"
+              id="first-name"
+              type="text"
+              required
+              placeholder="John"
+            />
+          </div>
+          <div id="last-name-container">
+            <label for="last-name"
+              >Last Name <span class="required">*</span></label
+            >
+            <input
+              name="lastName"
+              id="last-name"
+              type="text"
+              required
+              placeholder="Smith"
+            />
+          </div>
+        </div>
+        <div id="contact-info-container">
+          <div id="phone-container">
+            <label for="phone">Phone Number</label>
+            <input
+              type="text"
+              id="phone"
+              name="phone"
+              placeholder="800-888-8888"
+            />
+          </div>
+          <div id="email-container">
+            <label for="email"
+              >E-mail Address <span class="required">*</span></label
+            >
+            <input
+              name="email"
+              id="email"
+              type="email"
+              required
+              placeholder="JohnSmith@gmail.com"
+            />
+          </div>
+        </div>
+
+        <label for="message">Message <span class="required">*</span></label>
+        <input
+          name="message"
+          id="message"
+          type="text"
+          required
+          placeholder="Anything you want to discuss goes here!"
+        />
+
+        <div id="submit-button-wrapper" class="icon-button">
+          <input
+            id="submit-button"
+            class="button submit-button"
+            value="SUBMIT"
+            type="submit"
+          />
+        </div>
+      </form>
+      <p class="copyright">
+        Copyright 2021 Greenflow HVAC. All rights reserved.
+      </p>
+    </section>
+    <!-- JQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <!-- Javascripts -->
+    <script src="javascripts/mobile/main.js"></script>
+  </body>
+</html>

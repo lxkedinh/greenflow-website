@@ -1,0 +1,33 @@
+/**
+ * Form response desktop page styles
+ */
+@media screen and (min-width: 750px) {
+  /* hide mobile elements */
+  #form-response,
+  #navigation {
+    display: none;
+  }
+
+  #desktop-form-response {
+    height: 100vh;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+
+  #response {
+    margin-top: 5rem;
+  }
+
+  #home-button {
+    margin-top: 1rem;
+  }
+
+  .copyright {
+    margin-top: auto;
+  }
+}
