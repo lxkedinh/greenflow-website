@@ -1,4 +1,5 @@
 const functions = require("firebase-functions");
+const path = require("path");
 
 // exports.app = functions.https.onRequest(expressApp);
 const createError = require("http-errors");
@@ -12,15 +13,18 @@ const helmet = require("helmet");
 /**
  * Routers
  */
-const formSubmissionRouter = require("./routes/formsubmission");
+const formSubmissionRouter = require(path.join(
+  __dirname,
+  "./routes/formsubmission"
+));
 
-const {
-  formSuccessRouter,
-  formFailureRouter,
-} = require("./routes/formhandling");
+const { formSuccessRouter, formFailureRouter } = require(path.join(
+  __dirname,
+  "./routes/formhandling"
+));
 
 // view engine setup
-app.set("views", "../views");
+app.set("views", path.join(__dirname, "../views"));
 app.set("view engine", "ejs");
 
 app.use(compression());
@@ -29,7 +33,7 @@ app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static("../public"));
+app.use(express.static(path.join(__dirname, "../public")));
 
 app.listen(3000, () => {
   console.log("Listening to PORT 3000");
