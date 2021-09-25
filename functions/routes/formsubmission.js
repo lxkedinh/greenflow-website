@@ -4,10 +4,8 @@ let router = express.Router();
 
 // MailJet API Keys
 const mailjet = require("node-mailjet").connect(
-  // process.env.MJ_PUBLIC_KEY,
-  // process.env.MJ_SECRET_KEY
-  "cae65c9d7f8d128906ca553160e0543a",
-  "c17ce41bd8566e579c6a326d0461e124"
+  process.env.MAILJET_PUBLIC,
+  process.env.MAILJET_SECRET
 );
 
 // POST form submission page.
