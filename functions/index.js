@@ -43,24 +43,24 @@ app.listen(3000, () => {
  * Routes
  */
 // GET home page.
-app.get("/", (req, res, next) => {
+app.get("/app/", (req, res, next) => {
   res.render("index");
 });
 // GET history page.
-app.get("/history", (req, res, next) => {
+app.get("/app/history", (req, res, next) => {
   res.render("history");
 });
 // GET projects page.
-app.get("/projects", (req, res, next) => {
+app.get("/app/projects", (req, res, next) => {
   res.render("projects");
 });
 // GET contact form page.
-app.get("/contact-us", (req, res, next) => {
+app.get("/app/contact-us", (req, res, next) => {
   res.render("contactform");
 });
-app.use("/form-submission", formSubmissionRouter);
-app.use("/form-success", formSuccessRouter);
-app.use("/form-failure", formFailureRouter);
+app.use("/app/form-submission", formSubmissionRouter);
+app.use("/app/form-success", formSuccessRouter);
+app.use("/app/form-failure", formFailureRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
