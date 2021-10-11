@@ -1,0 +1,21 @@
+/**
+ * History page styles for mobile
+ */
+@media screen and (max-width: 749px) {
+  /* Hide all desktop elements */
+  #desktop-history {
+    display: none;
+  }
+
+  #history h2 {
+    font-size: 1rem;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  /* nav and last h2 grows to fill rest of space to push copyright to bottom of page */
+  nav,
+  h2:last-of-type {
+    flex-grow: 1;
+  }
+}

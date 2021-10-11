@@ -23,8 +23,9 @@ const { formSuccessRouter, formFailureRouter } = require(path.join(
   "./routes/formhandling"
 ));
 
-// view engine setup
-app.set("views", path.join(__dirname, "../views"));
+// view engine and serve public ejs, css, and javascripts from Firebase Hosting site
+app.set("views", path.join(__dirname, ".", "public", "views"));
+app.use(express.static(path.join(__dirname, ".", "public")));
 app.set("view engine", "ejs");
 
 app.use(compression());
@@ -33,34 +34,40 @@ app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, "../public")));
 
-app.listen(3000, () => {
-  console.log("Listening to PORT 3000");
-});
+// trusted sources for Content Security Policy HTTP Headers
+app.use(
+  helmet.contentSecurityPolicy({
+    useDefaults: true,
+    directives: {
+      "script-src": ["'self'", "https://code.jquery.com"],
+      "img-src": ["'self'", "https://images.pexels.com"],
+    },
+  })
+);
 
 /**
  * Routes
  */
 // GET home page.
-app.get("/app/", (req, res, next) => {
+app.get("/", (req, res, next) => {
   res.render("index");
 });
 // GET history page.
-app.get("/app/history", (req, res, next) => {
+app.get("/history", (req, res, next) => {
   res.render("history");
 });
 // GET projects page.
-app.get("/app/projects", (req, res, next) => {
+app.get("/projects", (req, res, next) => {
   res.render("projects");
 });
 // GET contact form page.
-app.get("/app/contact-us", (req, res, next) => {
+app.get("/contact-us", (req, res, next) => {
   res.render("contactform");
 });
-app.use("/app/form-submission", formSubmissionRouter);
-app.use("/app/form-success", formSuccessRouter);
-app.use("/app/form-failure", formFailureRouter);
+app.use("/form-submission", formSubmissionRouter);
+app.use("/form-success", formSuccessRouter);
+app.use("/form-failure", formFailureRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

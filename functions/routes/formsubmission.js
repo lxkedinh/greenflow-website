@@ -1,11 +1,14 @@
 let express = require("express");
 const functions = require("firebase-functions");
 let router = express.Router();
+require("dotenv").config();
 
 // MailJet API Keys
 const mailjet = require("node-mailjet").connect(
-  process.env.MAILJET_PUBLIC,
-  process.env.MAILJET_SECRET
+  // process.env.MAILJET_PUBLIC,
+  // process.env.MAILJET_SECRET
+  `${functions.config().mailjetpublic.key}`,
+  `${functions.config().mailjetsecret.key}`
 );
 
 // POST form submission page.
@@ -42,11 +45,11 @@ router.post("/", function (req, res, next) {
   request
     .then((result) => {
       // console.log(result.body);
-      res.redirect("/form-success");
+      res.redirect("/app/form-success");
     })
     .catch((err) => {
       // console.log(err);
-      res.redirect("/form-failure");
+      res.redirect("/app/form-failure");
     });
 });
 

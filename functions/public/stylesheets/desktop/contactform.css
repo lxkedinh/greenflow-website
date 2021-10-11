@@ -1,0 +1,111 @@
+/**
+ * Desktop contact us page styles
+ */
+@media screen and (min-width: 750px) {
+  /* hide mobile elements */
+  #contact-us,
+  #navigation {
+    display: none;
+  }
+
+  #desktop-contact-us {
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+
+  #contact-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    width: 35vw;
+    flex-flow: column nowrap;
+    flex-grow: 1;
+
+    font-size: 1.2rem;
+  }
+
+  label {
+    margin-left: 0.5rem;
+  }
+
+  #name-container,
+  #contact-info-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+
+  #first-name-container,
+  #last-name-container,
+  #phone-container,
+  #email-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  #name-container input,
+  #phone,
+  #email,
+  #message {
+    border: 1px solid #707070;
+    border-radius: 5px;
+    padding: 0.25rem 2rem 0.25rem 0.5rem;
+  }
+
+  #last-name-container,
+  #email-container {
+    margin-left: 2rem;
+  }
+
+  #message {
+    border-radius: 10px;
+    padding-top: 1rem;
+    padding-bottom: 8rem;
+    width: 100%;
+  }
+
+  .required {
+    margin-left: 0.25rem;
+    color: red;
+  }
+
+  #submit-button-wrapper {
+    margin-top: 1rem;
+    align-self: flex-end;
+    position: relative;
+  }
+
+  #submit-button {
+    font-size: 0.95rem;
+    border: none;
+    padding-left: 1.5rem;
+    padding-right: 0.75rem;
+    cursor: pointer;
+  }
+
+  #submit-button-wrapper::before,
+  #submit-button-wrapper::after {
+    background-color: black;
+  }
+
+  .icon-button::before {
+    left: 14%;
+  }
+
+  .icon-button::after {
+    left: 15%;
+  }
+}

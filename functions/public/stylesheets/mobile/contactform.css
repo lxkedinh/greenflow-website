@@ -1,0 +1,107 @@
+/**
+ * Contact Us page styles for mobile
+ */
+@media screen and (max-width: 749px) {
+  /* Hide all desktop elements */
+  #desktop-contact-us {
+    display: none;
+  }
+
+  #contact-form {
+    margin: 1rem auto 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: baseline;
+    width: 85vw;
+    flex-grow: 1;
+  }
+
+  #contact-name {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+  }
+
+  #contact-name input {
+    height: 2.5rem;
+    border-radius: 40px;
+    width: 90%;
+    padding: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  #contact-form label {
+    font-size: 1rem;
+    margin-left: 1rem;
+    padding-bottom: 0.5rem;
+  }
+
+  #contact-form input {
+    border: 1px solid #707070;
+    box-shadow: 1px 4px 10px 1px rgba(0, 0, 0, 0.16);
+  }
+
+  #phone,
+  #email {
+    width: 100%;
+    margin-bottom: 1.5rem;
+    height: 2.5rem;
+    border-radius: 40px;
+    padding: 1rem;
+  }
+
+  #message {
+    border-radius: 20px;
+    width: 100%;
+    padding: 1rem;
+    padding-bottom: 10rem;
+  }
+
+  .required {
+    color: red;
+  }
+
+  #contact-submit-button-wrapper {
+    margin-top: 1.5rem;
+    border-radius: 5px;
+    align-self: flex-end;
+    position: relative;
+  }
+
+  .contact-submit-button {
+    background-color: rgba(98, 0, 238, 0.12);
+  }
+
+  #contact-submit-button-wrapper::before {
+    content: "";
+    position: absolute;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    top: 50%;
+    left: 15%;
+    width: 2px;
+    height: 15px;
+    background-color: black;
+  }
+
+  #contact-submit-button-wrapper::after {
+    content: "";
+    position: absolute;
+    transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    top: 50%;
+    left: 15%;
+    width: 15px;
+    height: 2px;
+    background-color: black;
+  }
+}
