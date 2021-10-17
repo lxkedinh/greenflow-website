@@ -17,6 +17,7 @@
     align-items: baseline;
     width: 85vw;
     flex-grow: 1;
+    overflow: scroll;
   }
 
   #contact-name {
