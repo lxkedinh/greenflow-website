@@ -45,11 +45,11 @@ router.post("/", function (req, res, next) {
   request
     .then((result) => {
       // console.log(result.body);
-      res.redirect("/app/form-success");
+      res.redirect("/form-success");
     })
     .catch((err) => {
       // console.log(err);
-      res.redirect("/app/form-failure");
+      res.redirect("/form-failure");
     });
 });
 

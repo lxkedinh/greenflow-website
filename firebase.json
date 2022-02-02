@@ -5,6 +5,12 @@
   "hosting": {
     "public": "public",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**", ".gitignore"],
-    "rewrites": []
+    "cleanUrls": true,
+    "rewrites": [
+      {
+        "source": "/form-submission",
+        "function": "app"
+      }
+    ]
   }
 }

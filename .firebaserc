@@ -1,5 +1,17 @@
 {
   "projects": {
     "default": "greenflow-hvac"
+  },
+  "targets": {
+    "greenflow-hvac": {
+      "hosting": {
+        "app": [
+          "greenflow-app"
+        ],
+        "api": [
+          "api-greenflow-hvac"
+        ]
+      }
+    }
   }
 }

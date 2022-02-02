@@ -125,7 +125,7 @@
 
   /* Mobile navigation menu */
   #navigation {
-    transition: left 1.5s ease-in-out;
+    transition: left 0.75s ease-in-out;
     z-index: 10;
     top: 0;
     width: 100vw;
@@ -213,7 +213,7 @@
   }
 
   body {
-    background-color: #e8e8e8;
+    background-color: #fff;
   }
 
   /* Desktop navigation bar */

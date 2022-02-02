@@ -1,0 +1,39 @@
+/**
+ * 404 mobile page styles
+*/
+@media screen and (max-width: 749px) {
+    /* hide desktop section */
+    #desktop-error-404 {
+        display: none;
+    }
+
+    #error-404 {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-flow: column;
+    }
+
+    .error-message {
+        margin: 10rem auto 5rem auto;
+        text-align: center;
+        width: 50vw;
+    }
+
+    #home-button {
+        align-self: center;
+        margin: 0 auto;
+        color: black;
+        padding: 0.25rem;
+        text-decoration: none;
+        cursor: pointer;
+        background-color: rgba(98, 0, 238, 0.12);
+        border-radius: 5px;
+        border: 1px solid #707070;
+    }
+
+    .copyright {
+        margin-top: auto;
+        margin-bottom: 0;
+    }
+}

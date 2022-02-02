@@ -1,0 +1,53 @@
+/**
+ * Desktop resources page styles
+ */
+@media screen and (min-width: 750px) {
+  /* hide mobile styles */
+  #resources,
+  #navigation {
+    display: none;
+  }
+
+  #desktop-resources {
+    width: 100vw;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  .message-container {
+      margin: auto;
+      display: flex;
+      flex-flow: column;
+      width: 85vw;
+  }
+
+  .message {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 40px;
+  }
+
+  .construction-images-container {
+      display: flex;
+      flex-flow: row;
+      justify-content: center;
+  }
+
+  .construction-image {
+      width: 100%;
+      max-width: 300px;
+      height: auto;
+  }
+
+  #right-construction-image {
+      margin-left: 40px;
+  }
+
+  .copyright {
+      text-align: center;
+  }
+}

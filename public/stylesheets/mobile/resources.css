@@ -1,0 +1,49 @@
+/**
+ * Mobile resources page styles 
+ */
+@media screen and (max-width: 749px) {
+    /* Hide desktop page styles */
+    #desktop-resources {
+        display: none;
+    }
+
+    #resources {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        flex-flow: column;
+    }
+
+    .message-container {
+        display: flex;
+        flex-flow: column;
+        margin: auto;
+    }
+
+    .message {
+        text-align: center;
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+    }
+
+    .construction-images-container {
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+    }
+
+    .construction-image {
+        width: 100%;
+        max-width: 130px;
+        height: auto;
+    }
+
+    #right-construction-image {
+        transform: scaleX(-1);
+        margin-left: 10px;
+    }
+
+    .copyright {
+        margin-top: auto;
+    }
+}

@@ -1,39 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%= title %></title>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greenflow HVAC - 404</title>
     <!-- Stylesheets -->
     <link rel="stylesheet" href="/stylesheets/main.css" />
-    <link rel="stylesheet" href="/stylesheets/mobile/formresponse.css" />
-    <link rel="stylesheet" href="/stylesheets/desktop/formresponse.css" />
-  </head>
-  <body>
-    <!-- Mobile form response section -->
-    <section id="form-response">
-      <div class="menu">
-        <img
-          class="logo"
-          src="images/greenflow logo.svg"
-          alt="Greenflow HVAC Logo"
-        />
-
-        <!-- Hamburger menu button -->
-        <div id="nav-button-wrapper">
-          <div class="nav-button"></div>
-          <div class="nav-button"></div>
-          <div class="nav-button"></div>
+    <link rel="stylesheet" href="/stylesheets/mobile/404.css" />
+    <link rel="stylesheet" href="/stylesheets/desktop/404.css" />
+</head>
+<body>
+    <!-- Mobile error 404 -->
+    <section id="error-404">
+        <div class="menu">
+            <img
+              class="logo"
+              src="/images/greenflow logo.svg"
+              alt="Greenflow HVAC Logo"
+            />
+    
+            <!-- Hamburger menu button -->
+            <div id="nav-button-wrapper">
+              <div class="nav-button"></div>
+              <div class="nav-button"></div>
+              <div class="nav-button"></div>
+            </div>
         </div>
-      </div>
-      <p id="response"><%= response %></p>
-      <a href="/" id="home-button">Home</a>
-      <p class="copyright">
-        Copyright 2021 Greenflow HVAC. All rights reserved.
-      </p>
+        <p class="error-message">404 - The page you were looking for could not be found.</p>
+
+        <a href="/" id="home-button">Home</a>
+
+        <p class="copyright">
+          Copyright 2021 Greenflow HVAC. All rights reserved.
+        </p>
     </section>
-    <!-- Mobile navigation menu -->
+    <!-- Navigation menu -->
     <section id="navigation" class="hidden-navigation">
       <div class="menu">
         <img
@@ -48,7 +50,11 @@
         </div>
       </div>
 
-      <nav class="menu-items">
+      <ul class="menu-items">
+        <li class="menu-item">
+          <div class="list-marker"></div>
+          <a class="nav-link" href="/">Home</a>
+        </li>
         <li class="menu-item">
           <div class="list-marker"></div>
           <a class="nav-link" href="/history">Our History</a>
@@ -65,19 +71,19 @@
           <div class="list-marker"></div>
           <a class="nav-link" href="/contact-us">Contact Us</a>
         </li>
-      </nav>
+      </ul>
 
       <p class="copyright">
         Copyright 2021 Greenflow HVAC. All rights reserved.
       </p>
     </section>
-    <!-- Desktop form response section -->
-    <section id="desktop-form-response">
+    <!-- Desktop error 404 -->
+    <section id="desktop-error-404">
       <nav id="navbar">
         <ul id="nav-menu">
           <img
             class="logo"
-            src="images/desktop logo.png"
+            src="/images/desktop logo.png"
             alt="Greenflow Logo"
           />
           <li class="nav-item" id="nav-title">
@@ -97,7 +103,9 @@
           </li>
         </ul>
       </nav>
-      <p id="response"><%= response %></p>
+      <p id="response">
+        404 - The page you were looking for could not be found.
+      </p>
       <a href="/" id="home-button" class="button">Home</a>
       <p class="copyright">
         Copyright 2021 Greenflow HVAC. All rights reserved.
@@ -111,5 +119,5 @@
     ></script>
     <!-- Javascripts -->
     <script src="javascripts/mobile/main.js"></script>
-  </body>
+</body>
 </html>
